@@ -24,13 +24,14 @@ client.on('message', msg => {
 
       if (body.is_fake) {
         let s = " * " + body.url;
+        let c = (body.confidence * 100).toFixed(0) + "%"
         let replies = [];
 
-        replies.push('M-master! I think some of the links you posted are tagged as fake..\r\n' + s);
-        replies.push('Ehhhhhh..? I-i think some of those links are fake!\r\n' + s);
-        replies.push('Hehe, master! Those links are fake.. People make mistakes sometimes right?\r\n' + s);
-        replies.push('I-its not like I\'m picking on you or anything! But those links are fake!\r\n' + s);
-        replies.push('Kukuku, master those links are fake! I got\'cha!\r\n' + s);
+        replies.push('M-master! I think some of the links you posted are tagged as ' + c + ' fake..\r\n' + s);
+        replies.push('Ehhhhhh..? I-i think some of those links are ' + c + ' fake!\r\n' + s);
+        replies.push('Hehe, master! Those links are ' + c + ' fake.. People make mistakes sometimes right?\r\n' + s);
+        replies.push('I-its not like I\'m picking on you or anything! But those links are ' + c + ' fake!\r\n' + s);
+        replies.push('Kukuku, master those links are ' + c + ' fake! I got\'cha!\r\n' + s);
 
         msg.reply(replies[Math.floor(Math.random() * replies.length)]);
       }
