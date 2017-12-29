@@ -19,7 +19,7 @@ client.on('message', msg => {
 
   let urls = getUrls(content);
 
-  if (urls.count > 0) {
+  if (urls.length > 0) {
     urls.forEach(url => {
       got(api + '/api/stats?url=' + encodeUrl(url), {
         json: true
