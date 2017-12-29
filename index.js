@@ -131,6 +131,16 @@ client.on('message', msg => {
       replies.push('Aren\'t we friends already? Teehee..');
       replies.push('Friends for life!!');
       replies.push('I-its not like I don\'t want to or anything..!');
+    } else if (
+      (content.includes('why') &&
+      content.includes('exist')) ||
+      (content.includes('what') &&
+      content.includes('are') &&
+      content.includes('you'))
+    ) {
+      replies.push('I.. I-i don\'t know..');
+      replies.push('What are you?');
+      replies.push('Are you real? Am I real?');
     } else if (content.includes('joke')) {
       got('https://icanhazdadjoke.com', {
           json: true
