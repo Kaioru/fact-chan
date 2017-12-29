@@ -62,22 +62,22 @@ client.on('message', msg => {
       replies.push('Ehhh.. I don\'t think thats appropriate..');
       replies.push('>...< Please be mindful of your word choice..!');
     } else if (content === 'hi' ||
-        content.includes('hi ') ||
-        content.includes(' hi') ||
-        content.includes(' hi ') ||  // dont ask
-        content.includes('hello')) {
+      content.includes('hi ') ||
+      content.includes(' hi') ||
+      content.includes(' hi ') || // dont ask
+      content.includes('hello')) {
       replies.push('Moshi moshi, FactChan desu!');
       replies.push('H-hi, nice to meet you..!');
       replies.push('I-its not like I want to say hi to you or anything..! Baka!');
       replies.push('H-hello..');
     } else if (content.includes('how') &&
-                content.includes('are') &&
-                content.includes('you')) {
+      content.includes('are') &&
+      content.includes('you')) {
       replies.push('N-now that you are here.. I\'m doing great..!');
       replies.push('Why are you asking me that..? I\'m feeling all flustered now. >...<');
     } else if (
       ((content.includes('love') || content.includes('like')) &&
-      content.includes('you')) ||
+        content.includes('you')) ||
       content.includes('daisuki') ||
       content.includes('suki') ||
       content.includes('aishiteru') ||
@@ -115,14 +115,35 @@ client.on('message', msg => {
     } else if (
       content.includes('ddlc') ||
       (content.includes('doki') &&
-      (content.includes('literature') || content.includes('lit')) &&
-      content.includes('club'))
+        (content.includes('literature') || content.includes('lit')) &&
+        content.includes('club'))
     ) {
       replies.push('happy thoughts.');
     } else if (content.includes('xenoblade')) {
       replies.push('DON\'T FORGET ME');
       replies.push('THINK YOU CAN TAKE ME??');
       replies.push('YER DONE!');
+    } else if (content.includes('joke')) {
+      got('https://icanhazdadjoke.com', {
+          json: true
+        })
+        .then(result => {
+          msg.reply(result.body.joke);
+        });
+    } else if (content.includes('advice') || (content.includes('fortune') && content.includes('cookie'))) {
+      got('http://api.adviceslip.com/advice', {
+          json: true
+        })
+        .then(result => {
+          msg.reply(result.body.slip.advice);
+        });
+    } else if (content.includes('quote') || content.includes('motivate') || content.includes('motivation')) {
+      got('https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json', {
+          json: true
+        })
+        .then(result => {
+          msg.reply(`${result.body.quoteText} - ${result.body.quoteAuthor}`);
+        });
     }
 
     if (replies.length > 0) {
