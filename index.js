@@ -112,6 +112,17 @@ client.on('message', msg => {
       content.includes('husbando')
     ) {
       replies.push('Hehehe.. himitsu!');
+    } else if (
+      content.includes('ddlc') ||
+      (content.includes('doki') &&
+      (content.includes('literature') || content.includes('lit')) &&
+      content.includes('club'))
+    ) {
+      replies.push('happy thoughts.');
+    } else if (content.includes('xenoblade')) {
+      replies.push('DON\'T FORGET ME');
+      replies.push('THINK YOU CAN TAKE ME??');
+      replies.push('YER DONE!');
     }
 
     if (replies.length > 0) {
