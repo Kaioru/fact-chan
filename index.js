@@ -19,7 +19,7 @@ client.on('message', msg => {
 
   let urls = getUrls(content);
 
-  if (urls.length > 0) {
+  if (urls.size > 0) {
     urls.forEach(url => {
       got(api + '/api/stats?url=' + encodeUrl(url), {
         json: true
@@ -123,6 +123,14 @@ client.on('message', msg => {
       replies.push('DON\'T FORGET ME');
       replies.push('THINK YOU CAN TAKE ME??');
       replies.push('YER DONE!');
+    } else if (
+      content.includes('be') &&
+      content.includes('my') &&
+      content.includes('friend')
+    ) {
+      replies.push('Aren\'t we friends already? Teehee..');
+      replies.push('Friends for life!!');
+      replies.push('I-its not like I don\'t want to or anything..!');
     } else if (content.includes('joke')) {
       got('https://icanhazdadjoke.com', {
           json: true
