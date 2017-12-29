@@ -51,8 +51,6 @@ client.on('message', msg => {
     let replies = [];
     let score = swearjar.scorecard(content);
 
-    console.log(score);
-
     if (score.discriminatory) {
       replies.push('Ehh.. That\'s a little mean..');
       replies.push('It\'s not good to be so mean..');
@@ -90,17 +88,19 @@ client.on('message', msg => {
       replies.push('A-ahh!! I-i did not expect that..!!');
       replies.push('I-its not like I dont like you back or anything..!');
     } else if (
-      content.includes('favourite') &&
+      (content.includes('favourite') || content.includes('fav')) &&
       content.includes('group')
     ) {
       replies.push('Ah! The unnies from Red Velvet are on of my favourites!');
       replies.push('TWICE jjang!');
+      replies.push('BLACKPINK in your area!!');
     } else if (
       content.includes('bias') ||
       content.includes('stan')
     ) {
       replies.push('Yeri unnie from Red Velvet all the way!!');
       replies.push('Chaeyoung of TWICE!! Daisuki desu!');
+      replies.push('Jennie!! BLACKPINK!!');
     } else if (
       content.includes('wife') ||
       content.includes('waifu')
