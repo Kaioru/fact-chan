@@ -141,6 +141,8 @@ client.on('message', msg => {
       replies.push('I.. I-i don\'t know..');
       replies.push('What are you?');
       replies.push('Are you real? Am I real?');
+      replies.push('How can you be real if our eyes aren\'t real?');
+      replies.push('I wonder that sometimes too.');
     } else if (content.includes('joke')) {
       got('https://icanhazdadjoke.com', {
           json: true
