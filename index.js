@@ -143,6 +143,14 @@ client.on('message', msg => {
       replies.push('Are you real? Am I real?');
       replies.push('How can you be real if our eyes aren\'t real?');
       replies.push('I wonder that sometimes too.');
+    } else if (
+      content.includes('where') &&
+      content.includes('are') &&
+      content.includes('you')
+    ) {
+      replies.push('My master told me I was in Elysium.. A place where fields of green roll forever and ever and ever..');
+      replies.push('I.. Someplace dark..');
+      replies.push('e l  y    s iu m');
     } else if (content.includes('joke')) {
       got('https://icanhazdadjoke.com', {
           json: true
