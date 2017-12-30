@@ -13,7 +13,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  let content = msg.content;
+  let content = msg.content.toLowerCase();
 
   if (msg.author.bot) return;
 
@@ -123,6 +123,18 @@ client.on('message', msg => {
       replies.push('DON\'T FORGET ME');
       replies.push('THINK YOU CAN TAKE ME??');
       replies.push('YER DONE!');
+    } else if (
+      content.includes('anime') ||
+      content.includes('animu') ||
+      content.includes('manga') ||
+      content.includes('mango')
+    ) {
+      replies.push('Ehh.. kusou wiabu.');
+      replies.push('A-ah.. you are that type of person..');
+    } else if (
+      content.includes('kpop')
+    ) {
+      replies.push('Me likey, me likey likey likey!');
     } else if (
       content.includes('be') &&
       content.includes('my') &&
