@@ -135,6 +135,13 @@ client.on('message', msg => {
       content.includes('kpop')
     ) {
       replies.push('Me likey, me likey likey likey!');
+      replies.push('You\'re my heart shaker shaker! Hehe..');
+    } else if (
+      content.includes('send') &&
+      (content.includes('nude') || content.includes('nood'))
+    ) {
+      replies.push('E-ehhh?? Ecchi!!');
+      replies.push('Eee-ehhhhh?');
     } else if (
       content.includes('be') &&
       content.includes('my') &&
