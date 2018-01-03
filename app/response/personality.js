@@ -41,4 +41,36 @@ module.exports = ctx => {
             replies.push('BLACKPINK in your area!!');
         }
     }
+
+    if (
+        content.includes('bias') ||
+        content.includes('stan')
+    ) {
+        replies.push('Yeri unnie from Red Velvet all the way!!');
+        replies.push('Chaeyoung of TWICE!! Daisuki desu!');
+        replies.push('Jennie!! BLACKPINK!!');
+    }
+
+    if (
+        content.includes('wife') ||
+        content.includes('waifu')
+    ) {
+        if (content.includes('be')) {
+            replies.push('C-chotto! I-i wasn\'t ready for that!');
+        } else {
+            replies.push('Can\'t you tell from my avatar picture? Hehehe..');
+            replies.push('C-can it be you..?');
+        }
+    }
+    
+    if (
+        content.includes('husband') ||
+        content.includes('husbando')
+    ) {
+        if (content.includes('be')) {
+            replies.push('A-ah! I don\'t know what to say..!');
+        } else {
+            replies.push('Hehehe.. himitsu!');
+        }
+    }
 }
