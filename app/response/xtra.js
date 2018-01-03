@@ -1,6 +1,6 @@
 const got = require('got');
 
-module.exports = ctx => {
+module.exports = (ctx, callback) => {
     let client = ctx.client;
     let content = ctx.msg.content;
     let replies = ctx.replies;
