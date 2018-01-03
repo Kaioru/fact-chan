@@ -17,6 +17,7 @@ module.exports = ctx => {
             content.includes('nanyang') ||
             content.includes('temasek')) {
             replies.push('A-ah.. No comment..');
+            replies.push('I don\'t think I can say..');
         }
     }
 }
