@@ -5,12 +5,17 @@ module.exports = ctx => {
 
     if (content.includes('what')) {
         if (content.includes('course')) {
-            replies.push('In the school of ICT, we have a total of 5 diploma courses!\n' +
-                '* Animation & 3D Arts,\n' +
-                '* Financial Informatics,\n' +
-                '* Information Security & Forensics,\n' +
-                '* Information Technology and\n' +
-                '* Immersive Media & Game Design!');
+            if (content.includes('best')) {
+                replies.push('I-i think its all up to what you want to do!');
+                replies.push('I-i think all courses are great!');
+            } else {
+                replies.push('In the school of ICT, we have a total of 5 diploma courses!\n' +
+                    '* Animation & 3D Arts,\n' +
+                    '* Financial Informatics,\n' +
+                    '* Information Security & Forensics,\n' +
+                    '* Information Technology and\n' +
+                    '* Immersive Media & Game Design!');
+            }
         }
 
         if (content.includes('specialization') ||
@@ -24,6 +29,13 @@ module.exports = ctx => {
                 '* Infocomm Sales & Marketing,\n' +
                 '* Mobile Business Applications and\n' +
                 '* Solutions Architect!')
+        }
+    }
+
+    if (content.includes('open') &&
+        content.includes('house')) {
+        if (content.includes('think')) {
+            replies.push('E-eoh.. how do the students say it.. oh! This Open House is lit af fam!!');
         }
     }
 }

@@ -43,6 +43,13 @@ module.exports = ctx => {
       replies.push(`This is me! I\'m ${client.user.tag}!`);
     }
 
+    if (
+      content.includes('you') &&
+      content.includes('do')
+    ) {
+      replies.push('Heh! My mom used to tell me I could do anything, so I became a fact checker!');
+    }
+
     if (content.includes('name')) {
       if (content.includes('my')) {
         replies.push(`You're ${message.author.tag}!`);
