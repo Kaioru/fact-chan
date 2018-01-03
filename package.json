@@ -2,9 +2,9 @@
   "name": "fact-chan",
   "version": "1.0.0",
   "description": "the best waifu bot of factchecc",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "discord.js": "^11.2.1",
     "encodeurl": "^1.0.1",
     "get-urls": "^7.2.0",
+    "glob": "^7.1.2",
     "got": "^8.0.1",
     "swearjar": "^0.2.0"
   }
