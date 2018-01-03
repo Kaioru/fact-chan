@@ -36,7 +36,7 @@ module.exports = ctx => {
         }
 
         if (content.includes('kpop')) {
-            replies.push('Ah! The unnies from Red Velvet are on of my favourites!');
+            replies.push('Ah! The unnies from Red Velvet are one of my favourites!');
             replies.push('TWICE jjang!');
             replies.push('BLACKPINK in your area!!');
         }
