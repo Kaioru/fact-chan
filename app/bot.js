@@ -25,11 +25,18 @@ module.exports = class Bot {
         client: client,
         msg: msg,
         replies: [],
-        transformers: []
+        transformers: [],
+        skip: false
       }
 
       let callback = (ctx) => {
         let replies = ctx.replies;
+
+        if (!ctx.skip && replies.length === 0) {
+          replies.push('I-i.. don\'t think I quite understood that..');
+          replies.push('Sumimasen..! I don\'t understand..');
+          replies.push('T--T I don\'t quite get it..');
+        }
 
         if (replies.length > 0) {
           let reply = replies[Math.floor(Math.random() * replies.length)];

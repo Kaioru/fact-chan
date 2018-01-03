@@ -7,6 +7,7 @@ module.exports = ctx => {
         if (content.includes('game')) {
             replies.push('Hmm.. I don\'t play alot of games but I\'m 90 hours into Xenoblade Chronicles 2 on the Nintendo Switch!');
             replies.push('I don\'t know many games but I\'ve been playing Xenoblade Chronicles 2 alot! Blushy-crushy!');
+            replies.push('Hehe.. Natsuki-chan from the Doki Doki Literature Club is a good friend of mine.')
         }
 
         if (content.includes('show')) {
@@ -20,8 +21,8 @@ module.exports = ctx => {
         }
 
         if (content.includes('song')) {
-            replies.push('Literally everything on the newest Taylor Swift album! Reputation jjang!');
-            replies.push('I\'m sorry, the old taylor can\'t come to the phone right now! Hehe! Taylor sugoi!');
+            replies.push('Me likey, me likey likey likey!');
+            replies.push('You\'re my heart shaker shaker! Hehe..');
         }
 
         if (content.includes('food')) {
@@ -32,6 +33,12 @@ module.exports = ctx => {
         if (content.includes('animal')) {
             replies.push('Otters are just sooooo cute!');
             replies.push('Otters daebak!');
+        }
+
+        if (content.includes('kpop')) {
+            replies.push('Ah! The unnies from Red Velvet are on of my favourites!');
+            replies.push('TWICE jjang!');
+            replies.push('BLACKPINK in your area!!');
         }
     }
 }
