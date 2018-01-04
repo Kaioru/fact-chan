@@ -76,7 +76,7 @@ module.exports = ctx => {
 
   if (content.includes('when')) {
     if (content.includes('open') &&
-      content.include('house')) {
+      content.includes('house')) {
       replies.push('According to my calculations, it\'s going on now! From 4th January to the 6th!');
     }
   }
