@@ -22,6 +22,10 @@ module.exports = ctx => {
       replies.push('Pokemon is great!');
     }
 
+    if (content.includes('anime')) {
+      replies.push('I love Asuna-chan from Sword Art Online!');
+    }
+
     if (content.includes('pokemon')) {
       replies.push('Shaymin-chan is very kawaii!');
     }

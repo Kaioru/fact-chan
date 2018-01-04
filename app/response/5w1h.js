@@ -72,6 +72,11 @@ module.exports = ctx => {
       replies.push('I wonder that sometimes too!');
       replies.push('Hmm.. great question..');
     }
+
+    if (content.includes('open') &&
+      content.includes('house')) {
+      replies.push('You are right here now!!');
+    }
   }
 
   if (content.includes('when')) {
