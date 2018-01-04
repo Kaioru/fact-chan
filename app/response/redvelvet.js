@@ -7,4 +7,9 @@ module.exports = ctx => {
     content.includes('game')) {
     replies.push('Let\'s play a game of russian roulette!');
   }
+
+  if (content.includes('what') &&
+    (content.includes('flavor') || content.includes('flavour'))) {
+      replies.push('Red Flavor!');
+  }
 }

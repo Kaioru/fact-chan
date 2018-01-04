@@ -42,4 +42,15 @@ module.exports = ctx => {
             replies.push('E-eoh.. how do the students say it.. oh! This Open House is lit af fam!!');
         }
     }
+
+    if (content.includes('canteen')) {
+      if (content.includes('where')) {
+        replies.push('We have many canteens here, ask our lovely helpers to tell you more!');
+      }
+
+      if (content.includes('which')) {
+        replies.push('Chicken Rice at Makan Place jjang!');
+        replies.push('Theres so many Mala stores in NP..!');
+      }
+    }
 }
