@@ -40,6 +40,8 @@ module.exports = (ctx, callback) => {
                 if (error.statusCode === 500) { // lol dont ask im sleep deprived
                     got.post(api + '/api/articles?url=' + encodeUrl(url));
                 }
+
+                console.log(error)
                 // do nuthin else cuz factchan aint give no shits
             });
         });
