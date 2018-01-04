@@ -13,16 +13,15 @@ module.exports = (ctx, callback) => {
     if (urls.size > 0) {
         ctx.skip = true;
 
-        getUrls(content).forEach(url => {
+        urls.forEach(url => {
             got(api + '/api/stats?url=' + encodeUrl(url), {
                 json: true
             }).then(response => {
                 let body = response.body;
-
+                
                 if (body.is_fake) {
                     let s = " * " + body.url;
                     let c = (body.confidence * 100).toFixed(0) + "%"
-                    let replies = [];
 
                     replies.push('M-master! I think some of the links you posted are tagged as ' + c + ' fake..\r\n' + s);
                     replies.push('Ehhhhhh..? I-i think some of those links are ' + c + ' fake!\r\n' + s);
