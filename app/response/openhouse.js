@@ -52,5 +52,9 @@ module.exports = ctx => {
         replies.push('Chicken Rice at Makan Place jjang!');
         replies.push('Theres so many Mala stores in NP..!');
       }
+
+      if (content.includes('tray')) {
+        replies.push('Because little things matter! Please return your tray!!');
+      }
     }
 }

@@ -23,4 +23,12 @@ module.exports = ctx => {
   if (content.includes('stupid')) {
     replies.push('E-ehh.. so mean..');
   }
+
+  if (content.includes('chitoge')) {
+    replies.push('Chitoge-ojousama kawaii desu!');
+  }
+
+  if (content.includes('raku')) {
+    replies.push('<3_<3');
+  }
 }

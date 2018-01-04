@@ -31,13 +31,17 @@ module.exports = ctx => {
     }
 
     if (content.includes('movie')) {
-      replies.push('Don\'t you think Nemo from Finding Nemo is sooooo cute? Hehe!');
+      replies.push('Spirited Away!');
       replies.push('Have you watched Okja on Netflix? It\'s soooooo goooood!');
     }
 
     if (content.includes('song')) {
       replies.push('Me likey, me likey likey likey!');
       replies.push('You\'re my heart shaker shaker! Hehe..');
+    }
+
+    if (content.includes('drink')) {
+      replies.push('Banana Milk!');
     }
 
     if (content.includes('food')) {
@@ -54,6 +58,10 @@ module.exports = ctx => {
       replies.push('Ah! The unnies from Red Velvet are one of my favourites!');
       replies.push('TWICE jjang!');
       replies.push('BLACKPINK in your area!!');
+    }
+
+    if (content.includes('youtuber')) {
+      replies.push('Kizuna AI!');
     }
   }
 
