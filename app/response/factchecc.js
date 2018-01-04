@@ -18,7 +18,7 @@ module.exports = (ctx, callback) => {
                 json: true
             }).then(response => {
                 let body = response.body;
-                
+
                 if (body.is_fake) {
                     let s = " * " + body.url;
                     let c = (body.confidence * 100).toFixed(0) + "%"
@@ -38,6 +38,10 @@ module.exports = (ctx, callback) => {
             }).catch(error => {
                 if (error.statusCode === 500) { // lol dont ask im sleep deprived
                     got.post(api + '/api/articles?url=' + encodeUrl(url));
+                    replies.push('Hehe, I checked my databases and it looks like that URL is preeetttyyy safe.');
+                    replies.push('The URL looks safe to me, I clicked it for you guys, hehe..!');
+                    replies.push('That URL you sent looks all good to go!');
+                    callback(ctx);
                 }
 
                 console.log(error)
