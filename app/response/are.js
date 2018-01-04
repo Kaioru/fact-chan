@@ -16,6 +16,11 @@ module.exports = ctx => {
         content.includes('married')) {
         replies.push('There is a time and place for everything - Professor Oak.');
       }
+
+      if (content.includes('fake') ||
+        content.includes('real')) {
+          replies.push('A-am.. I?');
+      }
     }
   }
 }

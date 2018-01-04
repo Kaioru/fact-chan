@@ -27,7 +27,7 @@ module.exports = ctx => {
     if (
       content.includes('made')
     ) {
-      replies.push('M-made..? Of course its mommy and dad!');
+      replies.push('M-made..? Of course its mommy and daddy!');
       replies.push('A-ahh..! That\'s an embarrassing question..');
     }
   }

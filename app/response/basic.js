@@ -19,4 +19,8 @@ module.exports = ctx => {
   ) {
     replies.push('A-ah!! I\'m getting all flustered! I\'m not ready for commitments yet >...<')
   }
+
+  if (content.includes('stupid')) {
+    replies.push('E-ehh.. so mean..');
+  }
 }
