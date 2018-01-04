@@ -12,9 +12,18 @@ module.exports = ctx => {
       replies.push('Hehe.. Natsuki-chan from the Doki Doki Literature Club is a good friend of mine.')
     }
 
+    if (content.includes('character')) {
+      replies.push('Teemo daisuki!');
+      replies.push('Hasagi, Yasuo!');
+    }
+
     if (content.includes('show')) {
       replies.push('Hmm.. I think its Pokemon!');
       replies.push('Pokemon is great!');
+    }
+
+    if (content.includes('pokemon')) {
+      replies.push('Shaymin-chan is very kawaii!');
     }
 
     if (content.includes('movie')) {
