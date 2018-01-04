@@ -73,4 +73,12 @@ module.exports = ctx => {
             replies.push('Hehehe.. himitsu!');
         }
     }
+
+    if (
+        content.includes('send') &&
+        (content.includes('nude') || content.includes('nood'))
+    ) {
+        replies.push('E-ehhh?? Ecchi!!');
+        replies.push('Eee-ehhhhh?');
+    }
 }

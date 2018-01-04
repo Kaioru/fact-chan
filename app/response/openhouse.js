@@ -32,6 +32,10 @@ module.exports = ctx => {
         }
     }
 
+    if (content.includes('admission')) {
+        replies.push('E-eehhh, that\'s a lot to type out.. feel free to ask our lovely helpers instead~');
+    }
+
     if (content.includes('open') &&
         content.includes('house')) {
         if (content.includes('think')) {
